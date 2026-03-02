@@ -1,6 +1,11 @@
 <#
 .SYNOPSIS
   Enforce Windows Error Reporting (WER) LocalDumps policy to prevent large user-mode dump files.
+  Windows 11 device showed "System & Storage' was at 260GB, leaving very little storage left on the drive.
+  A service was crashing on this device repeatedly and triggering the creation of dump files.
+  These dump files were very large, 5-7GB each.
+  Each new crash writes a fresh .dmp file into a Temp folder (C:\Windows\ServiceProfiles\LocalService\AppData\Local\Temp)
+  that windows recognizes as System & Storage, quickly consuming hundreds of GB. 
 
 .DESCRIPTION
   - Sets system-wide WER LocalDumps to DumpType=1 (mini-dump) and DumpCount=5.
