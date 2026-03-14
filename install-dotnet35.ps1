@@ -1,6 +1,6 @@
 # Install .NET 3.5 using PS
 # Uses Windows built-in optional features to grab the install
-# Logs output to C:\temp\dotnet35.logs
+# Logs output to C:\temp\dotnet35.log
 
 # Ensure log directory exists
 $LogPath = 'C:\Temp\dotnet35.log'
